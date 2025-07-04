@@ -1,0 +1,19 @@
+# Example terraform.tfvars file
+# Copy this file to terraform.tfvars and modify the values as needed
+
+# Resource group configuration
+resource_group_name = "h09-aks-rg"
+location            = "canadacentral"
+
+# AKS cluster configuration
+cluster_name = "h09-aks-cluster"
+dns_prefix  = "h09aks"
+
+# Node pool configuration
+node_count = 1
+vm_size    = "Standard_B2s"
+
+# Note: For auto-scaling, you can modify the main.tf to use:
+# min_count = 1
+# max_count = 3
+# instead of node_count = 1 
